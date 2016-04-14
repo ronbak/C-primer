@@ -13,7 +13,7 @@ int main()
 	//string s;
 	//cout << "Plase input string: " << endl;
 	//cin >> s;
-	for(auto &c : s)
+	for(char &c : s)
 		c = 'X';
 	cout << s << endl;
 	return 0;
