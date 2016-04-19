@@ -12,17 +12,17 @@ using std::vector;
 
 int main()
 {
-	vector<int> text(10);
+	vector<int> text;
 	cout << "Plase input ten numbers: " << endl;
 	int temp = 0;
-	auto it_text = text.begin();
+//	auto it_text = text.begin();
 	auto cnt = 0;
 	
 	while(cin >> temp)
 	{
 	  text.push_back(temp);
-	  cout << "input number: " << *it_text << endl;
-      if(cnt > 10)
+//	  cout << "input number: " << *it_text << endl;
+      if(cnt >= 9)
 	  {
 		  cout << "overflow" << endl;
 		  break;
@@ -35,10 +35,6 @@ int main()
 		*it = *it * 2;
 		cout << *it << endl;
 	}
-	/*
-	for(auto c : text)
-	  cout << c << endl;
-	*/
 	return 0;
 }
 
