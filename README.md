@@ -1,7 +1,6 @@
 ---
 title: C++primer 第四章课后练习
 tags: C++ , 课后练习, 答案
-grammar_cjkRuby: true
 ---
 
 ### 练习4.1
