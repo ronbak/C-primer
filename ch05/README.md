@@ -150,7 +150,7 @@ do
     cout << "Please enter two numbers to sum: " ;
     if(cin >> v1 >>  v2)
     	cout << "Sum is: " << v1 + v2 << endl;
-}while(cin)
+}while(cin);
 ```
 
 - 修改2
@@ -158,7 +158,7 @@ do
 int ival;
 do
 {
-}while(ival = get_response())
+}while(ival = get_response());
 ```
 
 - 修改3
@@ -167,8 +167,19 @@ int ival = get_response();
 do
 {
 	ival = get_response();
-}while(ival)
+}while(ival);
 ```
 
 ### 练习5.19
 
+### 练习5.20
+
+### 练习5.21
+
+### 练习5.22
+
+### 练习5.23
+
+### 练习5.24
+
+### 练习5.25
