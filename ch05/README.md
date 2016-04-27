@@ -111,6 +111,43 @@ std::cin 在缺省的情况下会省略换行符和空格还有制表符等空�
 > **case 标签必须是整型常量表达式！！**
 
 ### 练习5.14
+*下面是mooophy的方法*
+```javascript?linenums
+
+#include <iostream>
+#include <string>
+
+using std::cout; using std::cin; using std::endl; using std::string; using std::pair;
+
+int main()
+{ 
+    pair<string, int> max_duplicated;
+    int count = 0;
+    for (string str, prestr; cin >> str; prestr = str)
+    {
+        if (str == prestr) ++count;
+        else count = 0; 
+        if (count > max_duplicated.second) max_duplicated = { prestr, count };
+    }
+    
+    if (max_duplicated.first.empty()) cout << "There's no duplicated string." << endl;
+    else cout << "the word " << max_duplicated.first << " occurred " << max_duplicated.second + 1 << " times. " << endl;
+    
+    return 0;
+}
+
+```
+> 他使用了std::pair,这是个比较简洁而且逻辑很明了！
+> 以下来自网络：
+>  std::pair主要的作用是将两个数据组合成一个数据，两个数据可以是同一类型或者不同类型。例如 std::pair<int,float> 或者 std：：pair<double,double>等。> pair实质上是一个结构体，其主要的两个成员变量是first和second，这两 个 变量可以直接使用。
+ pair是单个数据对的操作，pair是一struct类型，有两个成员变量，通过first,second来访问，用的是“.”访问。
+初始化一个pair可以使用构造函数，也可以使用std::make_pair函数，make_pair函数的定义如下：
+template pair make_pair(t1 a, t2 b) { return pair(a, b); }
+一般make_pair都使用在需要pair做参数的位置，可以直接调用make_pair生成pair对象。另一个使用的方面就是pair可以接受隐式的类型转换，这样可以获得更高的灵活度。但是这样会出现如下问题：例如有如下两个定义：
+std::pair<int, float>(1, 1.1);
+std::make_pair(1, 1.1);
+其中第一个的second变量是float类型，而make_pair函数会将second变量都转换成double类型。这个问题在编程是需要引起注意。
+
 
 ### 练习5.15
 - 修改1
@@ -184,3 +221,6 @@ do
 ### 练习5.24
 
 ### 练习5.25
+
+
+  [1]: ./images/1461722099743.jpg "1461722099743.jpg"
