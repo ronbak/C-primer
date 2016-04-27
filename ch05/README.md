@@ -215,10 +215,19 @@ do
 ### 练习5.21
 
 ### 练习5.22
+```javascript?linenums
+int sz;
+while( sz <= 0)
+{
+	sz = get_size();
+}
+```
 
 ### 练习5.23
 
 ### 练习5.24
+
+> 使用 runtime_error 需要添加 std::
 
 ### 练习5.25
 
