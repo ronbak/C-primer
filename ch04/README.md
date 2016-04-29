@@ -1,20 +1,17 @@
----
-title: C++primer 第四章课后练习
-tags: C++ , 课后练习, 答案
-grammar_cjkRuby: true
----
-
 ### 练习4.1
 	答案：55，先乘除后加减
-    
+
 ### 练习4.2
 	(a).	*(vec.begin())
-    (b).	(*(vec.begin())) + 1
-    
+	(b).	(*(vec.begin())) + 1
+
 ### 练习4.3
 
 
 ### 练习4.4
+	先乘除后加减，乘除求余左结合律。
+	答案：91
+
 
 
 ### 练习4.5
@@ -22,14 +19,14 @@ grammar_cjkRuby: true
     (b).	-18
     (c).	0
     (d).	-2
-    
+
  ### 练习4.6
 ``` javascript?linenums
 int num  = 0;
 std::cout << ((num % 2) == 0 ? "偶数" : "奇数") << std::endl;
 ```
 ### 练习4.7
--当变量现在的类型不能储存现在的值，而导致数据错误。
+- 当变量现在的类型不能储存现在的值，而导致数据错误。
 
 ```javascript?linenums
 
@@ -88,12 +85,12 @@ std::cout << ( a > b && b > c && c > d ? "True" : "False") << std::endl;
 
 ### 练习4.16
 (a).	!= 的优先级高于 =  			     
-*修改* 
+*修改*
 ```javascript?linenums
 if((p = getPtr()) != 0)
 ```
 (b).	对i进行赋值运算所得到的bool值为真
-*修改* 
+*修改*
 ```javascript?linenums
 if(i == 1024)
 ```
@@ -110,6 +107,20 @@ if(i == 1024)
 
 
 
+### 练习4.20
 
 
+### 练习4.21
 
+
+### 练习4.22
+
+### 练习4.23
+? : 运算符的优先级低于加减运算.
+修改如下：
+```
+string s = "word";
+string pl = s + (s[s.size() - 1] == 's' ? "" : "s");
+```
+
+### 练习4.24
