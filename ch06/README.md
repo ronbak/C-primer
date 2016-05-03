@@ -88,3 +88,58 @@ bool is_mepty(const string &s)
 ### 练习6.22
 
 ### 练习6.23
+
+### 练习6.24
+> http://stackoverflow.com/questions/26530659/confused-about-array-parameters#   
+
+```
+void print10(const int (&a)[10])
+{
+    for (auto i : a) { std::cout << i << "\n"; }
+}
+```
+
+### 练习6.25
+
+### 练习6.26
+
+### 练习6.27
+
+### 练习6.28
+- 因为il是std::initializer_list<string> 类型，而范围for语句中使用的是常量引用所以应该是std::string
+
+### 练习6.29
+- 应该，std::initializer_list对象中的元素永远是常量值，所以应该使用常量引用！
+
+### 练习6.30
+> 编译器：Dev-C++ 5.11
+1. 错误：[Error] return-statement with no value, in function returning 'bool' [-fpermissive]
+2. 第二个错没有检查出来。
+
+### 练习6.31
+> 1. 当返回的引用是函数内的局部变量时，返回的引用无效
+2. ？？？ 非常量方法返回常量引用的时候，返回值的类型不匹配。？？？
+
+### 练习6.32   
+- 合法！！！
+验证程序如下：
+
+```
+#include <iostream>
+
+int &get(int *arry, int index)
+{
+	return arry[index];
+}
+
+int main()
+{
+	int ia[10];
+	for(int i = 0; i != 10; ++i)
+		get(ia, i) = i;
+	for(auto j : ia)
+		std::cout << j << " " << std::endl;
+}
+
+```
+程序含义： 将0~9赋给ia数组。返回的
