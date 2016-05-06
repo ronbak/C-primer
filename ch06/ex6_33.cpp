@@ -3,12 +3,16 @@
 using std::vector; using std::cout;
 using Iter = vector<int>::const_iterator;
 
+#define NDEBUG
+
 void print(Iter first, Iter last)
 {
     if (first != last)
     {
+#ifdef NDEBUG
         cout << *first << " ";
-        print(++first, last);
+#endif
+		print(++first, last);
     }
 }
 
