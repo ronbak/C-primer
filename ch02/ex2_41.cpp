@@ -22,7 +22,7 @@ int main()
 	{
 		case 1:
 			{
-				std::cout << "Enter two recrod:" << std::endl;
+				std::cout << "Enter two record:" << std::endl;
 				std::cin >> book1.bookNo >> book1.sold >> book1.price;
 				std::cin >> book2.bookNo >> book2.sold >> book2.price;
 				if(book1.bookNo == book2.bookNo)
@@ -38,7 +38,7 @@ int main()
 			}
 		case 2:
 			{
-				std::cout << "Enter recrod: " << std::endl;
+				std::cout << "Enter record: " << std::endl;
 				
 				if(std::cin >> book.bookNo >> book.sold >> book.price)
 				{
